@@ -1,0 +1,23 @@
+<div class="toolbar" role="banner">
+	<span style="margin-left: 20px;">Political Tweet Temperature</span>
+	<div class="spacer"></div>
+</div>
+
+<div class="content" role="main">
+	<!-- Highlight Card -->
+	<div class="card highlight-card card-small">
+		Machine Learning Model: Political Affiliation
+	</div>
+
+	<h4>Number of tweets currently used in models: {{tweetCount}}</h4>
+	<button mat-stroked-button>Click Here To Grab More Tweets</button>
+
+	<br>
+	<label>Enter a tweet to see its partisanship</label>
+	<input 
+		mat-input
+		style="width: 50%;">
+
+	<div class="card-container">
+	</div>
+</div>
