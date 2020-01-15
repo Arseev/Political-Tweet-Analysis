@@ -9,14 +9,21 @@
 			Number of tweets currently used in model: {{tweetCount | number}}
 	</div>
 	<br>
-	<mat-form-field>
-		<mat-label>Enter Twitter handle</mat-label>
-		<input
-		matInput 
-		[formControl]="tweetHandle"
-		class="tweet-input"
-		placeholder="@GOP">
-	</mat-form-field>
+	<div class="infoStatement">
+		Enter a twitter handle below to analyze all tweets from that user 
+		in the last 7 days and then predict that user's partisanship using the top performing predictive model.
+	</div>
+	<div class="card" >
+		<mat-form-field class="handleEntry">
+			<mat-label>Enter Twitter handle</mat-label>
+			<input
+			matInput 
+			[formControl]="tweetHandle"
+			class="tweet-input"
+			placeholder="@GOP">
+		</mat-form-field>
+	</div>
+	
 	<div class="btn-group" role="group">
 		<button 
 			mat-raised-button  

@@ -1,5 +1,9 @@
 export class Tweets {
  tweet: string;
- party: string;
-}
+ userName: string;
 
+ constructor(tweet: string, userName: string) {
+  this.tweet = tweet;
+  this.userName = userName;
+ }
+}

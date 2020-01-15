@@ -99,6 +99,14 @@ transition: all 0.2s ease-in-out;
 line-height: 24px;
 }
 
+.infoStatement {
+	margin-top: 20px;
+}
+
+.handleEntry {
+	margin-top: 20px;
+}
+
 .card-container .card:not(:last-child) {
 margin-right: 0;
 }
@@ -126,7 +134,7 @@ background-color: #1976d2;
 color: white;
 font-weight: 600;
 border: none;
-width: 80%;
+width: 95%;
 min-width: 30%;
 position: relative;
 }
