@@ -25,22 +25,22 @@ export class TweetsService {
       .pipe(catchError(() => 'failed to get tweet count'));
   }
 
-  public getUserTweets(userName: string): Observable<Tweets[]> {
-    const URL = 'http://gettweets.com';
-    console.log(userName);
-    console.log('this');
+  public getUserTweets(userName: string): Observable<any> {
+    const URL = 'http://politicaltweettemperature.com/searchUser.php?user=' + userName;
+    return this.http.get(URL, this.httpOptions)
+      .pipe(catchError(() => 'failed to get tweets for ' + userName));
+  }
 
-    // mock data
-    const tweetData = [
-      {tweet: 'This is a test tweet1', party: 'Democrat'},
-      {tweet: 'This is a test tweet2', party: 'Democrat'},
-      {tweet: 'This is a test tweet3', party: 'Republican'},
-      {tweet: 'This is a test tweet4', party: 'Republican'},
-      {tweet: 'This is a test tweet5', party: 'Democrat'},
-      {tweet: 'This is a test tweet6', party: 'Democrat'},
-      {tweet: 'This is a test tweet7', party: 'Republican'}
-    ];
-    return of(tweetData);
+  public getWordWeights(): Observable<any> {
+    const URL = 'http://poloticaltweettemperature.com/getWordWeights.php';
+    return this.http.get(URL, this.httpOptions)
+      .pipe(catchError(() => 'failed to get word weights'));
+  }
+
+  public analyzeUserTweets(userName: string): Observable<any> {
+    const URL = 'http://politicaltweettemperature.com/analyzeUser.php?user=' + userName;
+    return this.http.get(URL, this.httpOptions)
+      .pipe(catchError(() => 'failed to analyze tweets for ' + userName));
   }
 
   public loadMoreTweetsForModel(): Observable<boolean> {
